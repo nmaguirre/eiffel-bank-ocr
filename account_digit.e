@@ -22,6 +22,11 @@ feature {ANY} -- Initialization
 	do
 	end
 
+	-- Class Creator
+	-- Take as parameter a digit codified as a STRING and
+	-- assign its corresponding value to the 'value' feature.
+	-- 'rep' has mandatorily 9 chars long & is composed
+	-- exclusively by the chars '|',' ' and '_'.
 	make_from_string_rep (rep: STRING)
 	do
 
