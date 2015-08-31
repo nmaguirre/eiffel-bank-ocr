@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <system xmlns="http://www.eiffel.com/developers/xml/configuration-1-13-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-13-0 http://www.eiffel.com/developers/xml/configuration-1-13-0.xsd" name="eiffel-bank-ocr" uuid="E17DEDE7-E118-4C56-A56E-92529DF1AB34">
 	<target name="eiffel-bank-ocr">
-		<root feature="make" class="APPLICATION"/>
-		<option warning="true">
+		<root class="APPLICATION" feature="make"/>
+		<option warning="true" is_attached_by_default="false" void_safety="none">
 			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
 		</option>
 		<setting name="console_application" value="true"/>
-		<precompile name="base_pre" location="$ISE_PRECOMP/base-safe.ecf"/>
-		<library name="base" location="$ISE_LIBRARY/library/base/base-safe.ecf"/>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base-safe.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base-safe.ecf"/>
+		<library name="testing" location="$ISE_LIBRARY\library\testing\testing.ecf"/>
 		<cluster name="eiffel-bank-ocr" location=".\" recursive="true">
 			<file_rule>
 				<exclude>/EIFGENs$</exclude>
-				<exclude>/.svn$</exclude>
 				<exclude>/CVS$</exclude>
+				<exclude>/.svn$</exclude>
 			</file_rule>
+			<tests name="tests" location=".\tests\"/>
 		</cluster>
 	</target>
 </system>
