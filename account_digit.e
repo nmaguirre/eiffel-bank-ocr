@@ -20,6 +20,7 @@ feature {ANY} -- Initialization
 
 	make
 	do
+		value := 0
 	end
 
 	make_from_string_rep (rep: STRING)
