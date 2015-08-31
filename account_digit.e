@@ -20,6 +20,7 @@ feature {ANY} -- Initialization
 
 	make
 	do
+		value := 0
 	end
 
 	-- Class Creator
@@ -34,9 +35,9 @@ feature {ANY} -- Initialization
 
 feature {ANY} -- Status setting
 
-	set_value (new_value: INTEGER)
+	set_value (new_value: INTEGER)--method used to change value to "value"
 	do
-		value := new_value
+		value := new_value-- set new_value for value
 	end
 
 	set_value_from_string_rep(new_value: STRING)
@@ -52,6 +53,7 @@ feature {ANY} -- Status report
 
 
 invariant
+  --this invariant controls if the digit are between 0 and 9
 	value>=0 and value<=9
 
 end
