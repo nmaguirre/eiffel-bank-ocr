@@ -31,11 +31,12 @@ feature {ANY} -- Status setting
 
 	set_value (new_value: INTEGER)
 	do
+		value := new_value
 	end
 
 	set_value_from_string_rep(new_value: STRING)
 	do
-		
+
 	end
 
 	out: STRING
