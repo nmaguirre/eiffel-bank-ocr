@@ -34,6 +34,9 @@ feature {ANY} -- Status setting
 		value := new_value
 	end
 
+	-- Set value from a string passed as a parameter
+	-- The string parameter should have nine characters long and
+	-- only underscore, pipe or space.
 	set_value_from_string_rep(new_value: STRING)
 	do
 
