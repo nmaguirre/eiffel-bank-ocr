@@ -41,7 +41,7 @@ feature
 
 	set_digit(pos: INTEGER; digit: ACCOUNT_DIGIT)
 	do
-
+		number[pos]:=digit
 	end
 
 
