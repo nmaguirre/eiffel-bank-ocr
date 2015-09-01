@@ -19,8 +19,11 @@ create
 feature -- Initialization
 
 	make
-	do
-	end
+			-- Class Creator
+			-- Initializes number array setting all values to default.
+		do
+			create number.make(1,9)
+		end
 
 feature
 

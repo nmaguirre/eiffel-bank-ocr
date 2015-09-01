@@ -42,12 +42,12 @@ feature {ANY} -- Status setting
 	end
 
 	set_value_from_string_rep(new_value: STRING)
-	-- Set value from a string passed as a parameter.
-	-- The string parameter should have nine characters long and
-	-- only underscore, pipe or space characters.
-	do
+			-- Set value from a string passed as a parameter.
+			-- The string parameter should have nine characters long and
+			-- only underscore, pipe or space characters.
+		do
 
-	end
+		end
 
 	-- The method is used to get a string representing the value of the number
 	out: STRING
