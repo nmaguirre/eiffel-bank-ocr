@@ -38,6 +38,16 @@ feature -- Test routines
 			assert ("value of d is 0", d.value = 0)
 		end
 
+	test_account_digit_make_from_string_rep
+			-- Value of digit should be the same as the respective representation
+		note
+			testing:  "covers/{ACCOUNT_DIGIT}.make_from_string_rep", "covers/{ACCOUNT_DIGIT}.value"
+		local
+			d: ACCOUNT_DIGIT
+		do
+			create d.make_from_string_rep(" _ |_  _|")
+			assert ("value of d is 5", d.value = 5)
+		end
 
 
 end

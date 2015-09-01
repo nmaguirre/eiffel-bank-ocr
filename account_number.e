@@ -35,18 +35,26 @@ feature
 	end
 
 	set_account_number(other_account_number: INTEGER)
+			-- this rutine change the number for other_account_number
 	do
 
 	end
 
+
 	set_digit(pos: INTEGER; digit: ACCOUNT_DIGIT)
 		--this routine put "digit" in position "pos"
+	require
+		valid_position: (pos>=0 and pos<9)
+		valid_digit: digit /= Void
 	do
 		number[pos]:=digit
+	ensure
+		number[pos] = digit
 	end
 
 
 	is_valid_account_number: BOOLEAN
+			--This routine check if account number is a valid number
 		local
 			i: INTEGER
 			is_valid: BOOLEAN
