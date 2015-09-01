@@ -39,7 +39,12 @@ feature
 
 	end
 
+
 	set_digit(pos: INTEGER; digit: ACCOUNT_DIGIT)
+		--this routine put "digit" in position "pos"
+	require
+		valid_position: (pos>=0 and pos<9)
+		valid_digit: digit /= Void
 	do
 		number[pos]:=digit
 	end
