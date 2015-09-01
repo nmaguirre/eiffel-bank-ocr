@@ -35,9 +35,10 @@ feature {ANY} -- Initialization
 
 feature {ANY} -- Status setting
 
-	set_value (new_value: INTEGER)--method used to change value to "value"
+	set_value (new_value: INTEGER)
+	--Change the value of the account digit
 	do
-		value := new_value-- set new_value for value
+		value := new_value
 	end
 
 	-- Set value from a string passed as a parameter
