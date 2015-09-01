@@ -47,6 +47,7 @@ feature
 
 
 	is_valid_account_number: BOOLEAN
+			--This routine check if account number is a valid number
 		do
 		end
 
