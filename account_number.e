@@ -40,6 +40,7 @@ feature
 	end
 
 	set_digit(pos: INTEGER; digit: ACCOUNT_DIGIT)
+		--this routine put "digit" in position "pos"
 	do
 		number[pos]:=digit
 	end
