@@ -58,7 +58,27 @@ feature
 
 	is_valid_account_number: BOOLEAN
 			--This routine check if account number is a valid number
+		local
+			i: INTEGER
+			is_valid: BOOLEAN
+			check_sum: INTEGER
+			aux: INTEGER
 		do
+			check_sum:= 0
+			from
+				i:=1
+			until
+				i>number.count
+			loop
+				aux:= 10 - i
+				check_sum:= check_sum + (aux * number.at(i).value)
+			end
+		if ((check_sum \\ 11) = 0) then
+			is_valid:= True
+		else
+			is_valid:= False
+		end
+		Result:= is_valid
 		end
 
 feature {NONE}
