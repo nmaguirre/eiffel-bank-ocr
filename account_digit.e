@@ -22,7 +22,7 @@ feature {ANY} -- Initialization
 	do
 		value := 0
 	end
-	
+
 	make_from_string_rep (rep: STRING)
 	-- Class Creator
 	-- Take as parameter a digit codified as a STRING and
@@ -41,10 +41,10 @@ feature {ANY} -- Status setting
 		value := new_value
 	end
 
-	-- Set value from a string passed as a parameter
-	-- The string parameter should have nine characters long and
-	-- only underscore, pipe or space.
 	set_value_from_string_rep(new_value: STRING)
+	-- Set value from a string passed as a parameter.
+	-- The string parameter should have nine characters long and
+	-- only underscore, pipe or space characters.
 	do
 
 	end
