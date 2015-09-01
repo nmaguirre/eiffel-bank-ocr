@@ -39,6 +39,8 @@ feature {ANY} -- Status setting
 
 	set_value (new_value: INTEGER)
 	--Change the value of the account digit
+	require
+		new_value >= 0 and new_value <= 9
 	do
 		value := new_value
 	end

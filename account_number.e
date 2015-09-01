@@ -47,10 +47,14 @@ feature
 		valid_digit: digit /= Void
 	do
 		number[pos]:=digit
+		
+	ensure
+		number[pos] = digit
 	end
 
 
 	is_valid_account_number: BOOLEAN
+			--This routine check if account number is a valid number
 		do
 		end
 
