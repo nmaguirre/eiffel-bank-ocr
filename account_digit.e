@@ -88,7 +88,7 @@ feature {ANY} -- Status report
 
 
 invariant
-  --this invariant controls if the digit are between 0 and 9
-	value>=0 and value<=9
 
+	value>=0 and value<=9
+			--the value must be a digit, then it must be between 0 and 9
 end
