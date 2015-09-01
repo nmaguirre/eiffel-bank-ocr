@@ -47,6 +47,9 @@ feature
 		valid_digit: digit /= Void
 	do
 		number[pos]:=digit
+		
+	ensure
+		number[pos] = digit
 	end
 
 
