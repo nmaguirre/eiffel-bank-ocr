@@ -35,6 +35,7 @@ feature
 	end
 
 	set_account_number(other_account_number: INTEGER)
+		--load the array with "other_account_number"
 	do
 
 	end
@@ -47,7 +48,7 @@ feature
 		valid_digit: digit /= Void
 	do
 		number[pos]:=digit
-		
+
 	ensure
 		number[pos] = digit
 	end
