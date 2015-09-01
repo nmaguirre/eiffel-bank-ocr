@@ -49,7 +49,38 @@ feature {ANY} -- Status setting
 
 	end
 
+	-- The method is used to get a string representing the value of the number
 	out: STRING
+	local
+		value_string:STRING -- Used to temporarily save a string depending the value of the number
+	do
+		inspect
+			value
+		when 0 then
+			value_string:=" _ | ||_|"
+		when 1 then
+			value_string:="  |  |  |"
+		when 2 then
+			value_string:=" _  _||_ "
+		when 3 then
+			value_string:=" _  _| _|"
+		when 4 then
+			value_string:="|_|  |  |"
+		when 5 then
+			value_string:=" _ |_  _|"
+		when 6 then
+			value_string:=" _ |_ |_|"
+		when 7 then
+			value_string:=" _   |  |"
+		when 8 then
+			value_string:=" _ |_||_|"
+		when 9 then
+			value_string:=" _ |_|  |"
+		else
+			value_string:="value error"
+		end
+		result:=value_string -- Returns the string
+	end
 
 feature {ANY} -- Status report
 
