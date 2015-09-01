@@ -35,6 +35,8 @@ feature
 	end
 
 	set_account_number(other_account_number: INTEGER)
+			-- this rutine change the number for other_account_number
+
 	do
 
 	end
