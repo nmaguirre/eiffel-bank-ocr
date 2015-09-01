@@ -27,6 +27,19 @@ feature -- Test routines
 			assert ("value of d is 2", d.value = 2)
 		end
 
+	test_account_digit_make_sets_zero
+			-- Value of digit after default creation should be zero
+		note
+			testing:  "covers/{ACCOUNT_DIGIT}.make", "covers/{ACCOUNT_DIGIT}.value"
+		local
+			d: ACCOUNT_DIGIT
+		do
+			create d.make
+			assert ("value of d is 0", d.value = 0)
+		end
+
+
+
 end
 
 
