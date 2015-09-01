@@ -39,17 +39,60 @@ feature {ANY} -- Status setting
 
 	set_value (new_value: INTEGER)
 	--Change the value of the account digit
+	require
+		new_value >= 0 and new_value <= 9
 	do
 		value := new_value
 	end
 
 	set_value_from_string_rep(new_value: STRING)
-	-- Set value from a string passed as a parameter.
-	-- The string parameter should have nine characters long and
-	-- only underscore, pipe or space characters.
-	do
-
-	end
+			-- Set value from a string passed as a parameter.
+			-- The string parameter should have nine characters long and
+			-- only underscore, pipe or space characters.
+		local
+			character:STRING
+			Res:STRING
+			i:INTEGER
+		do
+			from
+				i:=9
+			until
+				i=0
+			loop
+				character.append (new_value.head (9))
+				if(character=" _ | ||_|")then
+					Res.append("0")
+				end
+				if(character="  |  |  |")then
+					Res.append("1")
+				end
+				if(character=" _  _||_ ")then
+					Res.append("2")
+				end
+				if(character=" _  _| _|")then
+					Res.append("3")
+				end
+				if(character="|_|  |  |")then
+					Res.append("4")
+				end
+				if(character=" _ |_  _|")then
+					Res.append("5")
+				end
+				if(character=" _ |_ |_|")then
+					Res.append("6")
+				end
+				if(character=" _   |  |")then
+					Res.append("7")
+				end
+				if(character=" _ |_||_|")then
+					Res.append("8")
+				end
+				if(character=" _ |_|  |")then
+					Res.append("9")
+				end
+				i:=i-1
+			end
+		end
 
 	-- The method is used to get a string representing the value of the number
 	out: STRING
