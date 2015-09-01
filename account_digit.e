@@ -24,17 +24,69 @@ feature {ANY} -- Initialization
 	end
 
 	make_from_string_rep (rep: STRING)
-			-- Class Creator
-			-- Take as parameter a digit codified as a STRING and
-			-- assign its corresponding value to the 'value' feature.
-			-- 'rep' has mandatorily 9 chars long & is composed
-			-- exclusively by the chars '|',' ' and '_'.
-		require
-			rep.count=9
+	-- Class Creator
+	-- Take as parameter a digit codified as a STRING and
+	-- assign its corresponding value to the 'value' feature.
+	-- 'rep' has mandatorily 9 chars long & is composed
+	-- exclusively by the chars '|',' ' and '_'.
+	local
+		zero,one,two,three,four,five,six,seven,eight,nine:STRING
 	do
 
-	end
 
+
+
+
+		zero := " _ | ||_|"
+		one := "  |  |  |"
+		two := " _  _||_ "
+		three := " _  _| _|"
+		four := "|_|  |  |"
+		five := " _ |_  _|"
+		six := " _ |_ |_|"
+		seven := " _   |  |"
+		eight := " _ |_||_|"
+		nine := " _ |_|  |"
+
+		if(rep = zero)then
+			value:=0
+		else
+			if(rep = one)then
+				value:=1
+			else
+				if(rep = two)then
+					value:=2
+				else
+					if(rep = three)then
+						value:=3
+					else
+						if(rep = four)then
+							value:=4
+						else
+							if(rep = five)then
+								value:=5
+							else
+								if(rep = six)then
+									value:=6
+								else
+									if(rep = seven)then
+										value:=7
+									else
+										if(rep = eight)then
+											value:=8
+										else
+											value:=9
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+
+	end
 feature {ANY} -- Status setting
 
 	set_value (new_value: INTEGER)
