@@ -54,11 +54,6 @@ feature {ANY} -- Status setting
 			Res:STRING
 			i:INTEGER
 		do
-			from
-				i:=9
-			until
-				i=0
-			loop
 				character.append (new_value.head (9))
 				if(character=" _ | ||_|")then
 					Res.append("0")
@@ -90,8 +85,6 @@ feature {ANY} -- Status setting
 				if(character=" _ |_|  |")then
 					Res.append("9")
 				end
-				i:=i-1
-			end
 		end
 
 	-- The method is used to get a string representing the value of the number
