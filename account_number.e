@@ -35,7 +35,24 @@ feature
 	set_account_number_from_string_rep(account_number: STRING)
 			-- this rutine set account number from a string representation
 			-- assuming that account_number is a concatenation of strings representation of account digits
+	local
+		i, j, k: INTEGER
+		account_digit : ACCOUNT_DIGIT
+		string_digit : STRING
 	do
+		from
+			i := 9
+			j := account_number.count
+			k := j-8
+		until i<1 or k<1
+		loop
+			string_digit := account_number.substring(k, j)
+			create account_digit.make_from_string_rep(string_digit)
+			number.at(i) := account_digit
+			i := i-1
+			j := k-1
+			k := k-9
+		end
 
 	end
 
