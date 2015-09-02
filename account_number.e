@@ -28,9 +28,160 @@ feature -- Initialization
 feature
 
 	out: STRING
-	do
-
-	end
+		local
+			indice:INTEGER
+			linea:INTEGER
+			NumberCheck:ACCOUNT_DIGIT
+			Printer:STRING
+		do
+			from
+				linea:=1
+			until
+				linea>3
+			loop
+				from
+					indice:=1
+				until
+					indice>9
+				loop
+					NumberCheck:=number.item (indice)
+					if(NumberCheck.value=0) then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append ("| |")
+							else
+								if(linea=3)then
+									Printer.append ("|_|")
+								end --end if3
+							end -- end if2
+						end --end if1
+					end --end ifnumero
+					if(NumberCheck.value=1)then
+						if(linea=1) then
+							Printer.append ("  |")
+						else
+							if(linea=2)then
+								Printer.append ("  |")
+							else
+								if(linea=3)then
+									Printer.append ("  |")
+								end --end if3
+							end -- end if2
+						end --end if1
+					end --end ifnumero
+					if(NumberCheck.value=2)then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append (" _|")
+							else
+								if(linea=3)then
+									Printer.append ("|_ ")
+								end
+							end
+						end
+					end
+					if(NumberCheck.value=3)then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append (" _|")
+							else
+								if(linea=3)then
+									Printer.append (" _|")
+								end
+							end
+						end
+					end
+					if(NumberCheck.value=4)then
+						if(linea=1) then
+							Printer.append ("|_|")
+						else
+							if(linea=2)then
+								Printer.append ("  |")
+							else
+								if(linea=3)then
+									Printer.append ("  |")
+								end
+							end
+						end
+					end
+					if(NumberCheck.value=5)then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append ("|_ ")
+							else
+								if(linea=3)then
+									Printer.append (" _|")
+								end
+							end
+						end
+					end
+					if(NumberCheck.value=6)then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append ("|_ ")
+							else
+								if(linea=3)then
+									Printer.append ("|_|")
+								end
+							end
+						end
+					end
+					if(NumberCheck.value=7)then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append ("  |")
+							else
+								if(linea=3)then
+									Printer.append ("  |")
+								end
+							end
+						end
+					end
+					if(NumberCheck.value=8)then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append ("|_|")
+							else
+								if(linea=3)then
+									Printer.append ("|_|")
+								end
+							end
+						end
+					end
+					if(NumberCheck.value=9)then
+						if(linea=1) then
+							Printer.append (" _ ")
+						else
+							if(linea=2)then
+								Printer.append ("|_|")
+							else
+								if(linea=3)then
+									Printer.append("  |")
+								end
+							end
+						end
+					end
+					indice:=indice+1
+				end
+				Printer.append ("%N")
+				linea:=linea+1
+			end
+			Result:=Printer
+		end
 
 	set_account_number_from_string_rep(account_number: STRING)
 			-- this rutine set account number from a string representation
