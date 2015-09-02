@@ -33,6 +33,8 @@ feature
 	end
 
 	set_account_number_from_string_rep(account_number: STRING)
+			-- this rutine set account number from a string representation
+			-- assuming that account_number is a concatenation of strings representation of account digits
 	do
 
 	end
