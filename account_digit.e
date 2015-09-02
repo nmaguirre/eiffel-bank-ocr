@@ -90,12 +90,12 @@ feature {ANY} -- Initialization
 feature {ANY} -- Status setting
 
 	set_value (new_value: INTEGER)
-	--Change the value of the account digit
-	require
-		new_value >= 0 and new_value <= 9
-	do
-		value := new_value
-	end
+			--Set 'value' with 'new_value'
+		require
+			new_value >= 0 and new_value <= 9
+		do
+			value := new_value
+		end
 
 	set_value_from_string_rep(new_value: STRING)
 			-- Set value from a string passed as a parameter.
