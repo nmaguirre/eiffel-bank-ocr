@@ -58,9 +58,26 @@ feature
 
 	set_account_number(other_account_number: INTEGER)
 			-- this rutine change the number for other_account_number
-	do
-
-	end
+		local
+			aux,i,divider,next: INTEGER
+			number_account_digit : ACCOUNT_DIGIT
+		do
+			create number_account_digit.make
+			next:= other_account_number
+			from
+				divider:= 100000000
+				i:= 0
+			until
+				i>9
+			loop
+				aux:= next//divider
+				next:= next - (aux*divider)
+				number_account_digit.set_value(aux)
+				number[i]:= number_account_digit
+				i:= i+1
+				divider:= divider//10
+			end
+		end
 
 
 	set_digit(pos: INTEGER; digit: ACCOUNT_DIGIT)
