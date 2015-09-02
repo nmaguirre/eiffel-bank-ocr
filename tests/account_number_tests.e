@@ -41,13 +41,11 @@ feature -- Test routines
 
 			create account_number.make
 
-			account_number.set_account_number_from_string_rep("214358881")
-			--account_number.set_account_number(254313579)
+			account_number.set_account_number(254313579)
 			res := account_number.is_valid_account_number
 			assert ("value of res is true", res = true)
 
-			account_number.set_account_number_from_string_rep("123456789")
-			--account_number.set_account_number(123456789)
+			account_number.set_account_number(123456789)
 			res := account_number.is_valid_account_number
 			assert ("value of res is true", res = false)
 
