@@ -20,9 +20,10 @@ feature -- Initialization
 
 	make
 			-- Class Creator
-			-- Initializes number array setting all values to default.
+			-- Allocate array number; set index interval to
+			-- 1 .. 9; set all values to default (void).
 		do
-			create number.make(1,9)
+			create number.make_filled(void,1,9)
 		end
 
 feature
