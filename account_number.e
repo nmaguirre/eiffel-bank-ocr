@@ -29,12 +29,12 @@ feature -- Initialization
 feature
 
 	out: STRING
-		--this routine return a number using pipes and underscores
+			--This routine return a number using pipes and underscores
 		local
-			index:INTEGER
-			row:INTEGER
-			NumberCheck:ACCOUNT_DIGIT
-			Printer:STRING
+			index:INTEGER -- Line index
+			row:INTEGER -- Current line number
+			NumberCheck:ACCOUNT_DIGIT -- Current number
+			Printer:STRING -- Used to save a string
 		do
 			from
 				row:=1
@@ -56,10 +56,10 @@ feature
 							else
 								if(row=3)then
 									Printer.append ("|_|")
-								end --end if3
-							end -- end if2
-						end --end if1
-					end --end ifnumber
+								end
+							end
+						end
+					end
 					if(NumberCheck.value=1)then
 						if(row=1) then
 							Printer.append ("  |")
@@ -69,10 +69,10 @@ feature
 							else
 								if(row=3)then
 									Printer.append ("  |")
-								end --end if3
-							end -- end if2
-						end --end if1
-					end --end ifnumber
+								end
+							end
+						end
+					end
 					if(NumberCheck.value=2)then
 						if(row=1) then
 							Printer.append (" _ ")
