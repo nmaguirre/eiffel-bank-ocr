@@ -211,6 +211,10 @@ feature
 
 	set_account_number(other_account_number: INTEGER)
 			-- this rutine change the number for other_account_number
+		require
+			other_account_number_void : other_account_number /= 0
+			other_account_number_valid : other_account_number >= 100000000 and other_account_number <= 999999999
+
 		local
 			aux,i,divider,next: INTEGER
 			number_account_digit : ACCOUNT_DIGIT
