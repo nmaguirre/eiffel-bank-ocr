@@ -85,6 +85,13 @@ feature {ANY} -- Initialization
 	end
 feature {ANY} -- Status setting
 
+
+  is_a_valid_string_rep (rep: STRING) : BOOLEAN
+    do
+      result :=(rep.is_equal(" _ | ||_|") or rep.is_equal("  |  |  |") or rep.is_equal(" _  _||_ ") or rep.is_equal(" _  _| _|") or rep.is_equal("|_|  |  |") or rep.is_equal(" _ |_  _|") or rep.is_equal(" _ |_ |_|" or rep.is_equal(" _   |  |") or rep.is_equal(" _ |_||_|") or rep.is_equal(" _ |_|  |"))
+    end
+
+
 	set_value (new_value: INTEGER)
 			--Set 'value' with 'new_value'
 		require
