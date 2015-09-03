@@ -101,41 +101,36 @@ feature {ANY} -- Status setting
 			-- Set value from a string passed as a parameter.
 			-- The string parameter should have nine characters long and
 			-- only underscore, pipe or space characters.
-		local
-			character:STRING
-			Res:STRING
-			i:INTEGER
 		do
-				character.append (new_value.head (9))
-				if(character=" _ | ||_|")then
-					Res.append("0")
+				if(new_value=" _ | ||_|")then
+					value:=0
 				end
-				if(character="  |  |  |")then
-					Res.append("1")
+				if(new_value="  |  |  |")then
+					value:=1
 				end
-				if(character=" _  _||_ ")then
-					Res.append("2")
+				if(new_value=" _  _||_ ")then
+					value:=2
 				end
-				if(character=" _  _| _|")then
-					Res.append("3")
+				if(new_value=" _  _| _|")then
+					value:=3
 				end
-				if(character="|_|  |  |")then
-					Res.append("4")
+				if(new_value="|_|  |  |")then
+					value:=4
 				end
-				if(character=" _ |_  _|")then
-					Res.append("5")
+				if(new_value=" _ |_  _|")then
+					value:=5
 				end
-				if(character=" _ |_ |_|")then
-					Res.append("6")
+				if(new_value=" _ |_ |_|")then
+					value:=6
 				end
-				if(character=" _   |  |")then
-					Res.append("7")
+				if(new_value=" _   |  |")then
+					value:=7
 				end
-				if(character=" _ |_||_|")then
-					Res.append("8")
+				if(new_value=" _ |_||_|")then
+					value:=8
 				end
-				if(character=" _ |_|  |")then
-					Res.append("9")
+				if(new_value=" _ |_|  |")then
+					value:=9
 				end
 		end
 
