@@ -30,6 +30,8 @@ feature {ANY} -- Initialization
 	-- assign its corresponding value to the 'value' feature.
 	-- 'rep' has mandatorily 9 chars long & is composed
 	-- exclusively by the chars '|',' ' and '_'.
+  require
+     valid_rep : is_a_valid_string_rep(rep)
 	local
 		zero,one,two,three,four,five,six,seven,eight,nine:STRING
 	do
