@@ -1,8 +1,8 @@
 note
-	description: "Summary description for {ACCOUNT_NUMBER}."
-	author: ""
-	date: "$Date$"
-	revision: "$Revision$"
+	description	: "Summary description for {ACCOUNT_NUMBER}."
+	author		: ""
+	date			: "02-09-2015"
+	revision		: "0.1"
 
 class
 	ACCOUNT_NUMBER
