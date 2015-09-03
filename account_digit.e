@@ -19,6 +19,7 @@ create
 feature {ANY} -- Initialization
 
 	make
+		--default constructor
 	do
 		value := 0
 	end
@@ -32,21 +33,16 @@ feature {ANY} -- Initialization
 	local
 		zero,one,two,three,four,five,six,seven,eight,nine:STRING
 	do
-
-
-
-
-
-		zero := " _ | ||_|"
-		one := "  |  |  |"
-		two := " _  _||_ "
-		three := " _  _| _|"
-		four := "|_|  |  |"
-		five := " _ |_  _|"
-		six := " _ |_ |_|"
-		seven := " _   |  |"
-		eight := " _ |_||_|"
-		nine := " _ |_|  |"
+		zero := " _ | ||_|"	--representation of the number 0 using pipes and underscores
+		one := "  |  |  |"	--representation of the number 1 using pipes and underscores
+		two := " _  _||_ "	--representation of the number 2 using pipes and underscores
+		three := " _  _| _|"	--representation of the number 3 using pipes and underscores
+		four := "|_|  |  |"	--representation of the number 4 using pipes and underscores
+		five := " _ |_  _|"	--representation of the number 5 using pipes and underscores
+		six := " _ |_ |_|"	--representation of the number 6 using pipes and underscores
+		seven := " _   |  |"	--representation of the number 7 using pipes and underscores
+		eight := " _ |_||_|"	--representation of the number 8 using pipes and underscores
+		nine := " _ |_|  |"	--representation of the number 8 using pipes and underscores
 
 		if(rep = zero)then
 			value:=0

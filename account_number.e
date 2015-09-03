@@ -28,6 +28,7 @@ feature -- Initialization
 feature
 
 	out: STRING
+		--this routine return a number using pipes and underscores
 		local
 			indice:INTEGER
 			linea:INTEGER
