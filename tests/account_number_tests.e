@@ -93,8 +93,8 @@ feature -- Test routines
 			create account_number.make
 			create account_digit.make
 			account_digit.set_value (5)
-			account_number.set_digit (0, account_digit)
-			assert ("Should have a 5 in position 0", account_number.number[0].value = 5)
+			account_number.set_digit (1, account_digit)
+			assert ("Should have a 5 in position 0", account_number.number[1].value = 5)
 		end
 end
 
