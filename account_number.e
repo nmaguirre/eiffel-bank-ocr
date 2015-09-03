@@ -31,156 +31,156 @@ feature
 	out: STRING
 		--this routine return a number using pipes and underscores
 		local
-			indice:INTEGER
-			linea:INTEGER
+			index:INTEGER
+			row:INTEGER
 			NumberCheck:ACCOUNT_DIGIT
 			Printer:STRING
 		do
 			from
-				linea:=1
+				row:=1
 			until
-				linea>3
+				row>3
 			loop
 				from
-					indice:=1
+					index:=1
 				until
-					indice>9
+					index>9
 				loop
-					NumberCheck:=number.item (indice)
+					NumberCheck:=number.item (index)
 					if(NumberCheck.value=0) then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("| |")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append ("|_|")
 								end --end if3
 							end -- end if2
 						end --end if1
-					end --end ifnumero
+					end --end ifnumber
 					if(NumberCheck.value=1)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append ("  |")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("  |")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append ("  |")
 								end --end if3
 							end -- end if2
 						end --end if1
-					end --end ifnumero
+					end --end ifnumber
 					if(NumberCheck.value=2)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append (" _|")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append ("|_ ")
 								end
 							end
 						end
 					end
 					if(NumberCheck.value=3)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append (" _|")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append (" _|")
 								end
 							end
 						end
 					end
 					if(NumberCheck.value=4)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append ("|_|")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("  |")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append ("  |")
 								end
 							end
 						end
 					end
 					if(NumberCheck.value=5)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("|_ ")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append (" _|")
 								end
 							end
 						end
 					end
 					if(NumberCheck.value=6)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("|_ ")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append ("|_|")
 								end
 							end
 						end
 					end
 					if(NumberCheck.value=7)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("  |")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append ("  |")
 								end
 							end
 						end
 					end
 					if(NumberCheck.value=8)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("|_|")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append ("|_|")
 								end
 							end
 						end
 					end
 					if(NumberCheck.value=9)then
-						if(linea=1) then
+						if(row=1) then
 							Printer.append (" _ ")
 						else
-							if(linea=2)then
+							if(row=2)then
 								Printer.append ("|_|")
 							else
-								if(linea=3)then
+								if(row=3)then
 									Printer.append("  |")
 								end
 							end
 						end
 					end
-					indice:=indice+1
+					index:=index+1
 				end
 				Printer.append ("%N")
-				linea:=linea+1
+				row:=row+1
 			end
 			Result:=Printer
 		end
