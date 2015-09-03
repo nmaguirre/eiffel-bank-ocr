@@ -50,7 +50,7 @@ feature -- Test routines
 			assert ("value of res is true", res = false)
 
 		end
-		
+
 	tes_set_account_number
 		-- New test routine
 		note
@@ -66,6 +66,24 @@ feature -- Test routines
 			account_number.set_account_number(254313579)
 			number2 :=account_number.get_set_account_number
 			assert ("number1 and number2 are different", number1 /= number2)
+		end
+
+	test_account_number_set_account_number_from_string_rep
+			-- Test consist of creating a new ACCOUNT_NUMBER object, then use
+			-- the routine set_account_number_from_string_rep to assign to it
+			-- a specific value previously constructed on a STRING, for last it
+			-- checks that the generated number is in fact the wanted one by using
+			-- the routine 'out'  to get a STRING representation of it.
+		note
+			testing:  "covers/{ACCOUNT_NUMBER}.set_account_number_from_string_rep"
+		local
+			account_number: ACCOUNT_NUMBER
+			rep: STRING
+		do
+			create account_number.make
+			rep:= " _  _||_  _ |_  _||_|  |  | _  _| _|  |  |  | _  _| _| _ |_  _| _   |  | _ |_|  |"
+			account_number.set_account_number_from_string_rep(rep)
+			assert("The Account Number is 254313579","254313579" = account_number.out)
 		end
 end
 
