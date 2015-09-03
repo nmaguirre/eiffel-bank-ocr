@@ -130,6 +130,8 @@ feature {ANY} -- Status setting
 				if(new_value=" _ |_|  |")then
 					value:=9
 				end
+			ensure
+				value = new_value
 		end
 
 	-- The method is used to get a string representing the value of the number
