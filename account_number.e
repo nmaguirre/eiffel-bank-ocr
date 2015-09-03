@@ -267,7 +267,13 @@ feature
 		end
 		Result:= is_valid
 		end
+		
+feature -- Access	
 
+	get_set_account_number: ARRAY [ACCOUNT_DIGIT]
+		do
+			Result := number
+		end
 feature {NONE}
 
 	number: ARRAY [ACCOUNT_DIGIT]
