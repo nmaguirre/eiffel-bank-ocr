@@ -228,6 +228,8 @@ feature
 				i:= i+1
 				divider:= divider//10
 			end
+		ensure
+			number = other_account_number
 		end
 
 
@@ -267,7 +269,7 @@ feature
 		end
 		Result:= is_valid
 		end
-		
+
 feature -- Access	
 
 	get_set_account_number: ARRAY [ACCOUNT_DIGIT]
