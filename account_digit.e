@@ -33,6 +33,7 @@ feature {ANY} -- Initialization
 	local
 		zero,one,two,three,four,five,six,seven,eight,nine:STRING
 	do
+
 		zero := " _ | ||_|"	--representation of the number 0 using pipes and underscores
 		one := "  |  |  |"	--representation of the number 1 using pipes and underscores
 		two := " _  _||_ "	--representation of the number 2 using pipes and underscores
@@ -44,31 +45,31 @@ feature {ANY} -- Initialization
 		eight := " _ |_||_|"	--representation of the number 8 using pipes and underscores
 		nine := " _ |_|  |"	--representation of the number 8 using pipes and underscores
 
-		if(rep = zero)then
+		if(rep.is_equal(zero))then
 			value:=0
 		else
-			if(rep = one)then
+			if(rep.is_equal(one))then
 				value:=1
 			else
-				if(rep = two)then
+				if(rep.is_equal(two))then
 					value:=2
 				else
-					if(rep = three)then
+					if(rep.is_equal(three))then
 						value:=3
 					else
-						if(rep = four)then
+						if(rep.is_equal(four))then
 							value:=4
 						else
-							if(rep = five)then
+							if(rep.is_equal(five))then
 								value:=5
 							else
-								if(rep = six)then
+								if(rep.is_equal(six))then
 									value:=6
 								else
-									if(rep = seven)then
+									if(rep.is_equal(seven))then
 										value:=7
 									else
-										if(rep = eight)then
+										if(rep.is_equal(eight))then
 											value:=8
 										else
 											value:=9
@@ -81,7 +82,6 @@ feature {ANY} -- Initialization
 				end
 			end
 		end
-
 	end
 feature {ANY} -- Status setting
 
@@ -91,6 +91,8 @@ feature {ANY} -- Status setting
 			new_value >= 0 and new_value <= 9
 		do
 			value := new_value
+		ensure
+			value = new_value
 		end
 
 	set_value_from_string_rep(new_value: STRING)
@@ -128,6 +130,8 @@ feature {ANY} -- Status setting
 				if(new_value=" _ |_|  |")then
 					value:=9
 				end
+			ensure
+				value = new_value
 		end
 
 	-- The method is used to get a string representing the value of the number
