@@ -50,7 +50,23 @@ feature -- Test routines
 			assert ("value of res is true", res = false)
 
 		end
-
+		
+	tes_set_account_number
+		-- New test routine
+		note
+			testing:  "covers/{ACCOUNT_NUMBER}.set_account_number"
+		local
+			account_number: ACCOUNT_NUMBER
+			number1: ARRAY [ACCOUNT_DIGIT]
+			number2: ARRAY [ACCOUNT_DIGIT]
+		do
+			create account_number.make
+			account_number.set_account_number(123456789)
+			number1 :=account_number.get_set_account_number
+			account_number.set_account_number(254313579)
+			number2 :=account_number.get_set_account_number
+			assert ("number1 and number2 are different", number1 /= number2)
+		end
 end
 
 
