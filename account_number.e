@@ -230,7 +230,7 @@ feature
 				divider:= divider//10
 			end
 		ensure
-			number = other_account_number
+			as_integer = other_account_number
 		end
 
 
@@ -271,12 +271,29 @@ feature
 		Result:= is_valid
 		end
 
+	as_integer : INTEGER
+		--this routine produces an integer representation from the array of account digits
+		local
+			sum : INTEGER
+			unit : INTEGER
+			i :INTEGER
+		do
+			sum:=0
+			unit:=100000000
+			from i:=0 until i<10 loop
+				sum:=sum+unit
+				unit:=unit//10
+			end
+			Result:=sum
+		end
+
 feature -- Access	
 
 	get_set_account_number: ARRAY [ACCOUNT_DIGIT]
 		do
 			Result := number
 		end
+
 feature {NONE}
 
 	number: ARRAY [ACCOUNT_DIGIT]
