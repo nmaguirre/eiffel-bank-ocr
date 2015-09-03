@@ -59,8 +59,8 @@ feature -- Test routines
 			account_number: ACCOUNT_NUMBER
 		do
 			create account_number.make
-			-- account_number.set_account_number(123456789)
-			assert ("set_account_number", 2 = 2)
+			account_number.set_account_number(123456789)
+			assert ("set_account_number_correct", account_number.as_integer = 123456789)
 		end
 
 	test_account_number_set_account_number_from_string_rep
