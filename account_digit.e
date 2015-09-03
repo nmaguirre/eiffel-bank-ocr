@@ -89,8 +89,13 @@ feature {ANY} -- Status setting
 
 
   is_a_valid_string_rep (rep: STRING) : BOOLEAN
+    local
+      first_part,second_part,third_part : BOOLEAN
     do
-      result :=(rep.is_equal(" _ | ||_|") or rep.is_equal("  |  |  |") or rep.is_equal(" _  _||_ ") or rep.is_equal(" _  _| _|") or rep.is_equal("|_|  |  |") or rep.is_equal(" _ |_  _|") or rep.is_equal(" _ |_ |_|" or rep.is_equal(" _   |  |") or rep.is_equal(" _ |_||_|") or rep.is_equal(" _ |_|  |"))
+      first_part := (rep.is_equal(" _ | ||_|") or rep.is_equal("  |  |  |") or rep.is_equal(" _  _||_ ") or rep.is_equal(" _  _| _|"))
+      second_part :=(rep.is_equal("|_|  |  |") or rep.is_equal(" _ |_  _|") or rep.is_equal(" _ |_ |_|"))
+      third_part :=(rep.is_equal(" _   |  |") or rep.is_equal(" _ |_||_|") or rep.is_equal(" _ |_|  |"))
+      Result := (first_part or second_part or third_part)
     end
 
 
