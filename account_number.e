@@ -296,7 +296,7 @@ feature -- Access
 			Result := number
 		end
 
-feature {NONE}
+feature {ACCOUNT_NUMBER_TESTS}
 
 	number: ARRAY [ACCOUNT_DIGIT]
 
