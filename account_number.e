@@ -295,12 +295,6 @@ feature
 			Result:=sum
 		end
 
-feature -- Access	
-
-	get_set_account_number: ARRAY [ACCOUNT_DIGIT]
-		do
-			Result := number
-		end
 
 feature {ACCOUNT_NUMBER_TESTS}
 
