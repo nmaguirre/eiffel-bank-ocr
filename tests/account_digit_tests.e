@@ -49,7 +49,13 @@ feature -- Test routines
 			assert ("value of d is 5", d.value = 5)
 		end
 
-
+	 test_account_digit_set_value
+	 	local
+	 		d: ACCOUNT_DIGIT
+	 	do
+	 		d.set_value(6)
+			assert ("value of d is 6", d.value = 6)
+		end
 end
 
 
