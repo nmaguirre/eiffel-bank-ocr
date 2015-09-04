@@ -240,15 +240,15 @@ feature
 
 
 	set_digit(pos: INTEGER; digit: ACCOUNT_DIGIT)
-		--this routine put "digit" in position "pos"
-	require
-		valid_position: (pos>=1 and pos<10)
-		valid_digit: digit /= Void
-	do
-		number[pos]:=digit
-	ensure
-		number[pos] = digit
-	end
+			--this routine put "digit" in position "pos"
+		require
+			valid_position: (pos>=1 and pos<10)
+			valid_digit: digit /= Void
+		do
+			number[pos]:=digit
+		ensure
+			number[pos] = digit
+		end
 
 
 	is_valid_account_number: BOOLEAN
@@ -279,7 +279,7 @@ feature
 		end
 
 	as_integer : INTEGER
-		--this routine produces an integer representation from the array of account digits
+			--this routine produces an integer representation from the array of account digits
 		local
 			sum : INTEGER
 			unit : INTEGER
