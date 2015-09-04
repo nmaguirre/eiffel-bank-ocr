@@ -114,6 +114,8 @@ feature {ANY} -- Status setting
 			-- Set value from a string passed as a parameter.
 			-- The string parameter should have nine characters long and
 			-- only underscore, pipe or space characters.
+		require
+			valid_strig: new_value.count = 9 and is_a_valid_string_rep(new_value)
 		do
 			if(new_value=" _ | ||_|")then
 				value:=0
