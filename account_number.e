@@ -287,7 +287,7 @@ feature
 		do
 			sum:=0
 			unit:=100000000
-			from i:=1 until i>10 loop
+			from i:=1 until i>9 loop
 				sum:=sum+(number[i].value*unit)
 				unit:=unit//10
 				i:=i+1
