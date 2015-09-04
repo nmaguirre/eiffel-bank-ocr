@@ -219,16 +219,16 @@ feature
 			aux,i,divider,next: INTEGER
 			number_account_digit : ACCOUNT_DIGIT
 		do
-			create number_account_digit.make
 			next:= other_account_number
 			from
 				divider:= 100000000
-				i:= 0
+				i:= 1
 			until
-				i>9
+				i>10
 			loop
 				aux:= next//divider
 				next:= next - (aux*divider)
+				create number_account_digit.make
 				number_account_digit.set_value(aux)
 				number[i]:= number_account_digit
 				i:= i+1
