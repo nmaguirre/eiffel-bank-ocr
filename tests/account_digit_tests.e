@@ -53,6 +53,7 @@ feature -- Test routines
 	 	local
 	 		d: ACCOUNT_DIGIT
 	 	do
+	 		create d.make
 	 		d.set_value(6)
 			assert ("value of d is 6", d.value = 6)
 		end
