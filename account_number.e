@@ -224,7 +224,7 @@ feature
 				divider:= 100000000
 				i:= 1
 			until
-				i>10
+				i>9
 			loop
 				aux:= next//divider
 				next:= next - (aux*divider)
