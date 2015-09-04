@@ -290,6 +290,7 @@ feature
 			from i:=1 until i>10 loop
 				sum:=sum+(number[i].value*unit)
 				unit:=unit//10
+				i:=i+1
 			end
 			Result:=sum
 		end
