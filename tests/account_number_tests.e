@@ -78,7 +78,7 @@ feature -- Test routines
 			create account_number.make
 			rep:= " _  _||_  _ |_  _||_|  |  | _  _| _|  |  |  | _  _| _| _ |_  _| _   |  | _ |_|  |"
 			account_number.set_account_number_from_string_rep(rep)
-			assert("The Account Number is 254313579","254313579" = account_number.out)
+			assert("The Account Number is 254313579",254313579 = account_number.as_integer)
 		end
 
 	test_account_number_set_digit
