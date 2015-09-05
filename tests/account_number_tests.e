@@ -96,6 +96,24 @@ feature -- Test routines
 			account_number.set_digit (1, account_digit)
 			assert ("Should have a 5 in position 0", account_number.number[1].value = 5)
 		end
+
+
+	test_out
+	
+		note
+			testing:  "covers/{ACCOUNT_NUMBER}.out"
+		local
+			account_number: ACCOUNT_NUMBER
+			s : STRING
+		do
+			create account_number.make
+			account_number.set_account_number(123456789)
+			s := "  | _  _ |_| _  _  _  _  _ %N  |   _| _|  ||_ |_   ||_||_|%N  ||_  _|  | _||_|  ||_|  |%N"
+			assert ("Expects representation of 123456789 using pipes and underscores", account_number.out = s)
+
+		end
+
+
 end
 
 
