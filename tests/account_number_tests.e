@@ -99,7 +99,10 @@ feature -- Test routines
 
 
 	test_out
-	
+
+			-- test routine that performs the correct
+			-- representation of a number using pipes and underscores
+
 		note
 			testing:  "covers/{ACCOUNT_NUMBER}.out"
 		local
