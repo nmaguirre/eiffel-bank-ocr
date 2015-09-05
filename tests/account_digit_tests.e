@@ -48,15 +48,6 @@ feature -- Test routines
 			create d.make_from_string_rep(" _ |_  _|")
 			assert ("value of d is 5", d.value = 5)
 		end
-
-	 test_account_digit_set_value
-	 	local
-	 		d: ACCOUNT_DIGIT
-	 	do
-	 		create d.make
-	 		d.set_value(6)
-			assert ("value of d is 6", d.value = 6)
-		end
 end
 
 
