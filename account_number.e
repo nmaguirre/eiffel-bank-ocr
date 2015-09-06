@@ -188,6 +188,9 @@ feature
 	set_account_number_from_string_rep(account_number: STRING)
 			-- this rutine set account number from a string representation
 			-- assuming that account_number is a concatenation of strings representation of account digits
+		require
+			account_number /= Void
+			account_number.count = 81
 		local
 			i, j, k: INTEGER
 			account_digit : ACCOUNT_DIGIT
