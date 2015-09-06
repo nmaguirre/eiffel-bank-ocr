@@ -256,8 +256,6 @@ feature
 
 	is_valid_account_number: BOOLEAN
 			--This routine check if account number is a valid number
-		require
-			valid_number : as_integer /= Void
 		local
 			i: INTEGER
 			is_valid: BOOLEAN
