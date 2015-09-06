@@ -48,6 +48,20 @@ feature -- Test routines
 			create d.make_from_string_rep(" _ |_  _|")
 			assert ("value of d is 5", d.value = 5)
 		end
+
+	test_out
+		-- Test for routine out that performs the correct representation of a number
+		note
+			testing:  "covers/{ACCOUNT_DIGIT}.out"
+		local
+			d: ACCOUNT_DIGIT
+			str : STRING
+		do
+			 create d.make
+			 d.set_value(1)
+			 str := "  |  |  |"
+			 assert ("Representation of 1 using pipes and underscores", d.out = str)
+		end
 end
 
 
