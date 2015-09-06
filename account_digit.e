@@ -90,12 +90,15 @@ feature {ANY} -- Status setting
 
 
 	is_a_valid_string_rep (rep: STRING) : BOOLEAN
+			-- The routine takes a string as a parameter and returns a boolean.
+			-- If the string is equal to the representation of any of the nine
+			-- digits, returns true, otherwise returns false
     	local
       		first_part,second_part,third_part : BOOLEAN
     	do
       		first_part := (rep.is_equal(" _ | ||_|") or rep.is_equal("  |  |  |") or rep.is_equal(" _  _||_ ") or rep.is_equal(" _  _| _|"))
       		second_part :=(rep.is_equal("|_|  |  |") or rep.is_equal(" _ |_  _|") or rep.is_equal(" _ |_ |_|"))
-      		third_part :=(rep.is_equal(" _   |  |") or rep.is_equal(" _ |_||_|") or rep.is_equal(" _ |_|  |"))
+      		third_part := (rep.is_equal(" _   |  |") or rep.is_equal(" _ |_||_|") or rep.is_equal(" _ |_|  |"))
       		Result := (first_part or second_part or third_part)
     	end
 
