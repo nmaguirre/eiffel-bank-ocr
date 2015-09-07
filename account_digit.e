@@ -158,7 +158,7 @@ feature {ANY} -- Status setting
 				value:=9
 			end
 		ensure
-			value>=0 and value<=9
+			value /= Void
 		end
 
 
