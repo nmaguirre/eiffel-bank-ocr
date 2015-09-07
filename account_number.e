@@ -226,6 +226,10 @@ feature
 			from
 				divider:= 100000000
 				i:= 1
+			invariant
+				(1<=i) and (i<=9)
+			variant
+				9-i
 			until
 				i>9
 			loop
