@@ -258,7 +258,6 @@ feature
 			--This routine check if account number is a valid number
 		local
 			i: INTEGER
-			is_valid: BOOLEAN
 			check_sum: INTEGER
 			aux: INTEGER
 		do
@@ -270,13 +269,9 @@ feature
 			loop
 				aux:= 10 - i
 				check_sum:= check_sum + (aux * number.at(i).value)
+				i:= i+1
 			end
-		if ((check_sum \\ 11) = 0) then
-			is_valid:= True
-		else
-			is_valid:= False
-		end
-		Result:= is_valid
+		Result:= ((check_sum \\ 11) = 0)
 		end
 
 	as_integer : INTEGER
