@@ -97,15 +97,15 @@ feature {ANY} -- Status setting
       		is_zero,is_one,is_two,is_three,is_four,is_five,is_six,is_seven,is_eight,is_nine : BOOLEAN
     	do
       		is_zero := rep.is_equal(" _ | ||_|")
-		is_one := rep.is_equal("  |  |  |")
-		is_two := rep.is_equal(" _  _||_ ")
-		is_three := rep.is_equal(" _  _| _|")
+			is_one := rep.is_equal("  |  |  |")
+			is_two := rep.is_equal(" _  _||_ ")
+			is_three := rep.is_equal(" _  _| _|")
       		is_four := rep.is_equal("|_|  |  |")
-		is_five := rep.is_equal(" _ |_  _|")
-		is_six := rep.is_equal(" _ |_ |_|")
+			is_five := rep.is_equal(" _ |_  _|")
+			is_six := rep.is_equal(" _ |_ |_|")
       		is_seven := rep.is_equal(" _   |  |")
-		is_eight := rep.is_equal(" _ |_||_|")
-		is_nine := rep.is_equal(" _ |_|  |")
+			is_eight := rep.is_equal(" _ |_||_|")
+			is_nine := rep.is_equal(" _ |_|  |")
 		Result := is_one or is_two or is_three or is_four or is_five or is_six or is_seven or is_eight or is_nine
     	end
 
@@ -157,8 +157,6 @@ feature {ANY} -- Status setting
 			if(new_value=" _ |_|  |")then
 				value:=9
 			end
-		ensure
-			value /= Void
 		end
 
 
