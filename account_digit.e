@@ -157,8 +157,6 @@ feature {ANY} -- Status setting
 			if(new_value=" _ |_|  |")then
 				value:=9
 			end
-		ensure
-			value /= Void
 		end
 
 
