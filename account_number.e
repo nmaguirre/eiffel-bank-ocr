@@ -26,6 +26,29 @@ feature -- Initialization
 			create number.make_filled(void,1,9)
 		end
 
+	make_from_string(top: STRING; mid:STRING; bot:STRING)
+			-- Class Creator
+			-- Take a account number divided in three string wich each one represents
+			-- a diferent line from the account number string representation.
+		local
+			res: STRING
+			i,j,k: INTEGER
+		do
+			create res.make_empty
+			from
+				i := 1
+			until
+				i > 27
+			loop
+				j := i + 2
+				res.append (top.substring(i,j))
+				res.append (mid.substring(i,j))
+				res.append (bot.substring(i,j))
+				i := i + 3
+			end
+			set_account_number_from_string_rep(res)
+		end
+
 feature
 
 	out: STRING
