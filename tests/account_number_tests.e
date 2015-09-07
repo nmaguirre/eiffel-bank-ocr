@@ -112,11 +112,9 @@ feature -- Test routines
 			create account_number.make
 			account_number.set_account_number(123456789)
 			s := "  | _  _ |_| _  _  _  _  _ %N  |   _| _|  ||_ |_   ||_||_|%N  ||_  _|  | _||_|  ||_|  |%N"
-			assert ("Expects representation of 123456789 using pipes and underscores", account_number.out = s)
+			assert ("Expects representation of 123456789 using pipes and underscores", account_number.out.is_equal (s))
 
 		end
 
 
 end
-
-
