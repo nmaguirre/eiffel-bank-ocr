@@ -262,14 +262,15 @@ feature
 			aux: INTEGER
 		do
 			check_sum:= 0
+			aux:= 100000000
 			from
 				i:=1
 			until
-				i>number.count
+				i<number.count
 			loop
-				aux:= 10 - i
-				check_sum:= check_sum + (aux * number.at(i).value)
+				check_sum:= check_sum + (number.at(i).value * aux)
 				i:= i+1
+				aux:= aux // 10
 			end
 		Result:= ((check_sum \\ 11) = 0)
 		end
