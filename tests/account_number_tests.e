@@ -99,9 +99,9 @@ feature -- Test routines
 
 
 	test_out
-
-			-- test routine that performs the correct
-			-- representation of a number using pipes and underscores
+			-- tests that the out routine, producing a textual representation
+			-- of the account number using pipes, underscores and
+			-- blanks, works correctly.
 
 		note
 			testing:  "covers/{ACCOUNT_NUMBER}.out"
