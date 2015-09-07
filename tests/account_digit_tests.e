@@ -51,7 +51,7 @@ feature -- Test routines
 
 
 	test_account_digit_set_value_from_string_rep
-
+ 			-- Value of digit should be the same as the given parameter
 		note
 			testing:  "covers/{ACCOUNT_DIGIT}.set_value_from_string_rep", "covers/{ACCOUNT_DIGIT}.value"
 		local
