@@ -49,6 +49,20 @@ feature -- Test routines
 			assert ("value of d is 5", d.value = 5)
 		end
 
+
+	test_account_digit_set_value_from_string_rep
+
+		note
+			testing:  "covers/{ACCOUNT_DIGIT}.set_value_from_string_rep", "covers/{ACCOUNT_DIGIT}.value"
+		local
+			d: ACCOUNT_DIGIT
+		do
+			create d.make_from_string_rep( "|_|  |  |") -- four
+			d.set_value_from_string_rep( " _ |_  _|" ) -- five
+			assert ( "value of d is "+ d.value.out, d.value = 5 )
+		end
+
+
 	test_out
 		-- Test for routine out that performs the correct representation of a number
 		note
