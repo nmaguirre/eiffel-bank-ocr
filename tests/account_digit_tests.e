@@ -69,12 +69,12 @@ feature -- Test routines
 			testing:  "covers/{ACCOUNT_DIGIT}.out"
 		local
 			d: ACCOUNT_DIGIT
-			str : STRING
+			str: STRING
 		do
 			 create d.make
 			 d.set_value(1)
 			 str := "  |  |  |"
-			 assert ("Representation of 1 using pipes and underscores", d.out = str)
+			 assert ("Representation of 1 using pipes and underscores", str.is_equal(d.out))
 		end
 end
 

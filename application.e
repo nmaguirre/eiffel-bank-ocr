@@ -25,7 +25,7 @@ feature {NONE} -- Initialization
 			account: ACCOUNT_NUMBER
 		do
 			--| Add your code here
-			create accounts.make_open_read ("/tmp/accounts.txt")
+			create accounts.make_open_read ("accounts.txt")
 			create line.make_empty
 			accounts.read_line
 			line.append (accounts.last_string)
