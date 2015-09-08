@@ -173,6 +173,7 @@ feature
  			loop
  				aux:= 10 - i
  				check_sum:= check_sum + (aux * number.at(i).value)
+ 				i:=i+1
  			end
  		Result:= ((check_sum \\ 11) = 0)
  		end
