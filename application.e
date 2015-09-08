@@ -30,17 +30,14 @@ feature {NONE} -- Initialization
 			io.read_line
 			account_number_path := io.last_string
 			create accounts.make_open_read (account_number_path)
-			create top.make_empty
-			create mid.make_empty
-			create both.make_empty
 
 			from accounts.read_line until accounts.end_of_file loop
 				accounts.read_line
-				top := accounts.last_string
+				create top.make_from_string (accounts.last_string)
 				accounts.read_line
-				mid := accounts.last_string
+				create mid.make_from_string(accounts.last_string)
 				accounts.read_line
-				both := accounts.last_string
+				create both.make_from_string(accounts.last_string)
 				if (not accounts.end_of_file) then
 					accounts.read_line
 				end
