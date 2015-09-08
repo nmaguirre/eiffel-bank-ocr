@@ -30,7 +30,7 @@ feature -- Test routines
 			-- Value of account_number should be true
 			-- if the sum of the numbers multiplied by respective factors is multiple of 11
 			-- for example: number account= "987654321"
-			-- sum = (9*10)+(8*100)+(7*1000)+...+(1*1000000000)
+			-- sum = (1*10)+(2*100)+(3*1000)+...+(9*1000000000)
 			-- else should be false
 		note
 			testing:  "covers/{ACCOUNT_NUMBER}.is_valid_account_number"
@@ -41,13 +41,14 @@ feature -- Test routines
 
 			create account_number.make
 
-			account_number.set_account_number(254313579)
+			account_number.set_account_number(152713359)
 			res := account_number.is_valid_account_number
 			assert ("value of res is false", res = False)
 
-			account_number.set_account_number(123456789)
+			account_number.set_account_number(110000000)
 			res := account_number.is_valid_account_number
 			assert ("value of res is true", res = True)
+
 
 		end
 
