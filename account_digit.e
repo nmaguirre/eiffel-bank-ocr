@@ -125,34 +125,34 @@ feature {ANY} -- Status setting
 		require
 			valid_strig: new_value.count = 9 and is_a_valid_string_rep(new_value)
 		do
-			if(new_value=" _ | ||_|")then
+			if(new_value.is_equal(rep_zero))then
 				value:=0
 			end
-			if(new_value="  |  |  |")then
+			if(new_value.is_equal(rep_one))then
 				value:=1
 			end
-			if(new_value=" _  _||_ ")then
+			if(new_value.is_equal(rep_two))then
 				value:=2
 			end
-			if(new_value=" _  _| _|")then
+			if(new_value.is_equal(rep_three))then
 				value:=3
 			end
-			if(new_value="|_|  |  |")then
+			if(new_value.is_equal(rep_four))then
 				value:=4
 			end
-			if(new_value=" _ |_  _|")then
+			if(new_value.is_equal(rep_five))then
 				value:=5
 			end
-			if(new_value=" _ |_ |_|")then
+			if(new_value.is_equal(rep_six))then
 				value:=6
 			end
-			if(new_value=" _   |  |")then
+			if(new_value.is_equal(rep_seven))then
 				value:=7
 			end
-			if(new_value=" _ |_||_|")then
+			if(new_value.is_equal(rep_eight))then
 				value:=8
 			end
-			if(new_value=" _ |_|  |")then
+			if(new_value.is_equal(rep_nine))then
 				value:=9
 			end
 		end
