@@ -22,7 +22,7 @@ feature {ANY} -- Initialization
 	rep_one:STRING = "     |  |"	--representation of the number 1 using pipes and underscores
 	rep_two:STRING = " _  _||_ "	--representation of the number 2 using pipes and underscores
 	rep_three:STRING = " _  _| _|"	--representation of the number 3 using pipes and underscores
-	rep_four:STRING = "|_|  |  |"	--representation of the number 4 using pipes and underscores
+	rep_four:STRING = "   |_|  |"	--representation of the number 4 using pipes and underscores
 	rep_five:STRING = " _ |_  _|"	--representation of the number 5 using pipes and underscores
 	rep_six:STRING = " _ |_ |_|"	--representation of the number 6 using pipes and underscores
 	rep_seven:STRING = " _   |  |"	--representation of the number 7 using pipes and underscores
