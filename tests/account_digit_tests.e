@@ -73,7 +73,7 @@ feature -- Test routines
 		do
 			 create d.make
 			 d.set_value(1)
-			 str := "     |  |"
+			 str := d.rep_one
 			 assert ("Representation of 1 using pipes and underscores", str.is_equal(d.out))
 		end
 end
