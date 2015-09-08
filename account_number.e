@@ -56,9 +56,9 @@ feature
 		local
 			index:INTEGER -- Line index
 			row:INTEGER -- Current line number
-			Printer:STRING -- Used to save a string
+			printer:STRING -- Used to save a string
 		do
-			printer:=""
+			create printer.make_empty
 			from
 				row:=1
 			until
@@ -70,20 +70,20 @@ feature
 					index>9
 				loop
 					if(row=1) then
-						Printer.append (number[index].out.substring(1,3))
+						printer.append (number[index].out.substring(1,3))
 					end
 					if(row=2)then
-						Printer.append (number[index].out.substring(4,6))
+						printer.append (number[index].out.substring(4,6))
 					end
 					if(row=3)then
-						Printer.append (number[index].out.substring(7,9))
+						printer.append (number[index].out.substring(7,9))
 					end
 					index:=index+1
 				end
 				row:=row+1
-				Printer.append ("%N")
+				printer.append ("%N")
 			end
-			Result:=Printer
+			Result:=printer
 		end
 
 	set_account_number_from_string_rep(account_number: STRING)
