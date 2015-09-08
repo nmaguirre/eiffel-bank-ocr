@@ -30,7 +30,7 @@ feature -- Test routines
 			-- Value of account_number should be true
 			-- if the sum of the numbers multiplied by respective factors is multiple of 11
 			-- for example: number account= "987654321"
-			-- sum = (1*10)+(2*100)+(3*1000)+...+(9*1000000000)
+			-- sum = (1*1)+(2*10)+(3*100)+...+(9*100000000)
 			-- else should be false
 		note
 			testing:  "covers/{ACCOUNT_NUMBER}.is_valid_account_number"
