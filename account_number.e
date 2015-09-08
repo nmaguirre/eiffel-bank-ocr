@@ -56,9 +56,9 @@ feature
 		local
 			index:INTEGER -- Line index
 			row:INTEGER -- Current line number
-			NumberCheck:ACCOUNT_DIGIT -- Current number
 			Printer:STRING -- Used to save a string
 		do
+			printer:=""
 			from
 				row:=1
 			until
@@ -69,141 +69,19 @@ feature
 				until
 					index>9
 				loop
-					NumberCheck:=number.item (index)
-					if(NumberCheck.value=0) then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append ("| |")
-							else
-								if(row=3)then
-									Printer.append ("|_|")
-								end
-							end
-						end
+					if(row=1) then
+						Printer.append (number[index].out.substring(1,3))
 					end
-					if(NumberCheck.value=1)then
-						if(row=1) then
-							Printer.append ("  |")
-						else
-							if(row=2)then
-								Printer.append ("  |")
-							else
-								if(row=3)then
-									Printer.append ("  |")
-								end
-							end
-						end
+					if(row=2)then
+						Printer.append (number[index].out.substring(4,6))
 					end
-					if(NumberCheck.value=2)then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append (" _|")
-							else
-								if(row=3)then
-									Printer.append ("|_ ")
-								end
-							end
-						end
-					end
-					if(NumberCheck.value=3)then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append (" _|")
-							else
-								if(row=3)then
-									Printer.append (" _|")
-								end
-							end
-						end
-					end
-					if(NumberCheck.value=4)then
-						if(row=1) then
-							Printer.append ("|_|")
-						else
-							if(row=2)then
-								Printer.append ("  |")
-							else
-								if(row=3)then
-									Printer.append ("  |")
-								end
-							end
-						end
-					end
-					if(NumberCheck.value=5)then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append ("|_ ")
-							else
-								if(row=3)then
-									Printer.append (" _|")
-								end
-							end
-						end
-					end
-					if(NumberCheck.value=6)then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append ("|_ ")
-							else
-								if(row=3)then
-									Printer.append ("|_|")
-								end
-							end
-						end
-					end
-					if(NumberCheck.value=7)then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append ("  |")
-							else
-								if(row=3)then
-									Printer.append ("  |")
-								end
-							end
-						end
-					end
-					if(NumberCheck.value=8)then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append ("|_|")
-							else
-								if(row=3)then
-									Printer.append ("|_|")
-								end
-							end
-						end
-					end
-					if(NumberCheck.value=9)then
-						if(row=1) then
-							Printer.append (" _ ")
-						else
-							if(row=2)then
-								Printer.append ("|_|")
-							else
-								if(row=3)then
-									Printer.append("  |")
-								end
-							end
-						end
+					if(row=3)then
+						Printer.append (number[index].out.substring(7,9))
 					end
 					index:=index+1
 				end
-				Printer.append ("%N")
 				row:=row+1
+				Printer.append ("%N")
 			end
 			Result:=Printer
 		end
