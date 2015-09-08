@@ -41,7 +41,9 @@ feature {NONE} -- Initialization
 				mid := accounts.last_string
 				accounts.read_line
 				both := accounts.last_string
-				accounts.read_line
+				if (not accounts.end_of_file) then
+					accounts.read_line
+				end
 				create account.make
 				account.make_from_string(top,mid,both)
 				if (account.is_valid_account_number) then
