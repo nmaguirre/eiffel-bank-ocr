@@ -27,7 +27,7 @@ feature {ANY} -- Initialization
 	rep_six:STRING = " _ |_ |_|"	--representation of the number 6 using pipes and underscores
 	rep_seven:STRING = " _   |  |"	--representation of the number 7 using pipes and underscores
 	rep_eight:STRING = " _ |_||_|"	--representation of the number 8 using pipes and underscores
-	rep_nine:STRING = " _ |_|  |"	--representation of the number 8 using pipes and underscores
+	rep_nine:STRING = " _ |_| _|"	--representation of the number 8 using pipes and underscores
 
 	make
 			--default constructor
