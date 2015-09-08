@@ -43,46 +43,33 @@ feature {ANY} -- Initialization
 			-- exclusively by the chars '|',' ' and '_'.
   		require
      		valid_rep : is_a_valid_string_rep(rep)
-		local
-			zero,one,two,three,four,five,six,seven,eight,nine:STRING
 		do
 
-			zero := " _ | ||_|"	--representation of the number 0 using pipes and underscores
-			one := "  |  |  |"	--representation of the number 1 using pipes and underscores
-			two := " _  _||_ "	--representation of the number 2 using pipes and underscores
-			three := " _  _| _|"	--representation of the number 3 using pipes and underscores
-			four := "|_|  |  |"	--representation of the number 4 using pipes and underscores
-			five := " _ |_  _|"	--representation of the number 5 using pipes and underscores
-			six := " _ |_ |_|"	--representation of the number 6 using pipes and underscores
-			seven := " _   |  |"	--representation of the number 7 using pipes and underscores
-			eight := " _ |_||_|"	--representation of the number 8 using pipes and underscores
-			nine := " _ |_|  |"	--representation of the number 8 using pipes and underscores
-
-			if(rep.is_equal(zero))then
+			if(rep.is_equal(rep_zero))then
 				value:=0
 			else
-				if(rep.is_equal(one))then
+				if(rep.is_equal(rep_one))then
 					value:=1
 				else
-					if(rep.is_equal(two))then
+					if(rep.is_equal(rep_two))then
 						value:=2
 					else
-						if(rep.is_equal(three))then
+						if(rep.is_equal(rep_three))then
 							value:=3
 						else
-							if(rep.is_equal(four))then
+							if(rep.is_equal(rep_four))then
 								value:=4
 							else
-								if(rep.is_equal(five))then
+								if(rep.is_equal(rep_five))then
 									value:=5
 								else
-									if(rep.is_equal(six))then
+									if(rep.is_equal(rep_six))then
 										value:=6
 									else
-										if(rep.is_equal(seven))then
+										if(rep.is_equal(rep_seven))then
 											value:=7
 										else
-											if(rep.is_equal(eight))then
+											if(rep.is_equal(rep_eight))then
 												value:=8
 											else
 												value:=9
