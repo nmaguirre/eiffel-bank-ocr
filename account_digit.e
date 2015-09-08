@@ -94,16 +94,16 @@ feature {ANY} -- Status setting
     	local
       		is_zero,is_one,is_two,is_three,is_four,is_five,is_six,is_seven,is_eight,is_nine : BOOLEAN
     	do
-      		is_zero := rep.is_equal(" _ | ||_|")
-			is_one := rep.is_equal("  |  |  |")
-			is_two := rep.is_equal(" _  _||_ ")
-			is_three := rep.is_equal(" _  _| _|")
-      		is_four := rep.is_equal("|_|  |  |")
-			is_five := rep.is_equal(" _ |_  _|")
-			is_six := rep.is_equal(" _ |_ |_|")
-      		is_seven := rep.is_equal(" _   |  |")
-			is_eight := rep.is_equal(" _ |_||_|")
-			is_nine := rep.is_equal(" _ |_|  |")
+      		is_zero := rep.is_equal(rep_zero)
+			is_one := rep.is_equal(rep_one)
+			is_two := rep.is_equal(rep_two)
+			is_three := rep.is_equal(rep_three)
+      		is_four := rep.is_equal(rep_four)
+			is_five := rep.is_equal(rep_five)
+			is_six := rep.is_equal(rep_six)
+      		is_seven := rep.is_equal(rep_seven)
+			is_eight := rep.is_equal(rep_eight)
+			is_nine := rep.is_equal(rep_nine)
 		Result := is_one or is_two or is_three or is_four or is_five or is_six or is_seven or is_eight or is_nine
     	end
 
