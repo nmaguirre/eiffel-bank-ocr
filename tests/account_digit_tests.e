@@ -57,7 +57,7 @@ feature -- Test routines
 		local
 			d: ACCOUNT_DIGIT
 		do
-			create d.make_from_string_rep("|_|  |  |") -- four
+			create d.make_from_string_rep("   |_|  |") -- four
 			d.set_value_from_string_rep(" _ |_  _|") -- five
 			assert ( "value of d is "+ d.value.out, d.value = 5 )
 		end
