@@ -74,10 +74,13 @@ feature -- Test routines
 			testing:  "covers/{ACCOUNT_NUMBER}.set_account_number_from_string_rep"
 		local
 			account_number: ACCOUNT_NUMBER
+			reps : ACCOUNT_DIGIT
 			rep: STRING
 		do
 			create account_number.make
-			rep:= " _  _||_  _ |_  _||_|  |  | _  _| _|  |  |  | _  _| _| _ |_  _| _   |  | _ |_|  |"
+			create reps.make
+			create rep.make_empty
+			rep:= reps.rep_two+reps.rep_five+reps.rep_four+reps.rep_three+reps.rep_one+reps.rep_three+reps.rep_five+reps.rep_seven+reps.rep_nine
 			account_number.set_account_number_from_string_rep(rep)
 			assert("The Account Number is 254313579",254313579 = account_number.as_integer)
 		end
