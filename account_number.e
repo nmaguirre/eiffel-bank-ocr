@@ -160,24 +160,22 @@ feature
 
 	is_valid_account_number: BOOLEAN
 			--This routine check if account number is a valid number
-		local
-			i: INTEGER
-			check_sum: INTEGER
-			aux: INTEGER
-		do
-			check_sum:= 0
-			aux:= 1000000000
-			from
-				i:=1
-			until
-				i>number.count
-			loop
-				check_sum:= check_sum + (number.at(i).value * aux)
-				i:= i+1
-				aux:= aux // 10
-			end
-		Result:= ((check_sum \\ 11) = 0)
-		end
+ 		local
+ 			i: INTEGER
+ 			check_sum: INTEGER
+ 			aux: INTEGER
+ 		do
+ 			check_sum:= 0
+ 			from
+ 				i:=1
+ 			until
+ 				i>number.count
+ 			loop
+ 				aux:= 10 - i
+ 				check_sum:= check_sum + (aux * number.at(i).value)
+ 			end
+ 		Result:= ((check_sum \\ 11) = 0)
+ 		end
 
 	as_integer : INTEGER
 			--this routine produces an integer representation from the array of account digits
