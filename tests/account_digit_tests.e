@@ -57,8 +57,8 @@ feature -- Test routines
 		local
 			d: ACCOUNT_DIGIT
 		do
-			create d.make_from_string_rep( "|_|  |  |") -- four
-			d.set_value_from_string_rep( " _ |_  _|" ) -- five
+			create d.make_from_string_rep("|_|  |  |") -- four
+			d.set_value_from_string_rep(" _ |_  _|") -- five
 			assert ( "value of d is "+ d.value.out, d.value = 5 )
 		end
 
@@ -73,7 +73,7 @@ feature -- Test routines
 		do
 			 create d.make
 			 d.set_value(1)
-			 str := "  |  |  |"
+			 str := "     |  |"
 			 assert ("Representation of 1 using pipes and underscores", str.is_equal(d.out))
 		end
 end
