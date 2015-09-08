@@ -166,25 +166,25 @@ feature {ANY} -- Status setting
 			inspect
 				value
 			when 0 then
-				value_string:=" _ | ||_|"
+				value_string:=rep_zero
 			when 1 then
-				value_string:="  |  |  |"
+				value_string:=rep_one
 			when 2 then
-				value_string:=" _  _||_ "
+				value_string:=rep_two
 			when 3 then
-				value_string:=" _  _| _|"
+				value_string:=rep_three
 			when 4 then
-				value_string:="|_|  |  |"
+				value_string:=rep_four
 			when 5 then
-				value_string:=" _ |_  _|"
+				value_string:=rep_five
 			when 6 then
-				value_string:=" _ |_ |_|"
+				value_string:=rep_six
 			when 7 then
-				value_string:=" _   |  |"
+				value_string:=rep_seven
 			when 8 then
-				value_string:=" _ |_||_|"
+				value_string:=rep_eight
 			when 9 then
-				value_string:=" _ |_|  |"
+				value_string:=rep_nine
 			else
 				value_string:="value error"
 			end
