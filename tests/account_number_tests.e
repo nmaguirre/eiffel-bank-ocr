@@ -45,7 +45,7 @@ feature -- Test routines
 			res := account_number.is_valid_account_number
 			assert ("value of res is false", res = False)
 
-			account_number.set_account_number(110000000)
+			account_number.set_account_number(123456789)
 			res := account_number.is_valid_account_number
 			assert ("value of res is true", res = True)
 
