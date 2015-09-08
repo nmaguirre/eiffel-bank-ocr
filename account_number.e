@@ -127,9 +127,9 @@ feature
 				divider:= 100000000
 				i:= 1
 			invariant
-				(1<=i) and (i<=9)
+				(1<=i) and (i<=10)
 			variant
-				9-i
+				10-i
 			until
 				i>9
 			loop
