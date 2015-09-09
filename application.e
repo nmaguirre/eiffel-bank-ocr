@@ -25,7 +25,6 @@ feature {NONE} -- Initialization
 			account: ACCOUNT_NUMBER
 			account_number_path : STRING
 	do
-			--| Add your code here
 			create account_number_path.make_empty
 			io.read_line
 			account_number_path := io.last_string
@@ -33,13 +32,10 @@ feature {NONE} -- Initialization
 
 			from accounts.read_line until accounts.end_of_file loop
 				create top.make_from_string (accounts.last_string)
-				print(top)
 				accounts.read_line
 				create mid.make_from_string(accounts.last_string)
-				print(mid)
 				accounts.read_line
 				create both.make_from_string(accounts.last_string)
-				print(both)
 				if (not accounts.end_of_file) then
 					accounts.read_line
 				end
